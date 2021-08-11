@@ -1,90 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
- {font-family: 'Shrikhand', cursive;}
+/* MES VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+h1 {
+  font-family: 'Shrikhand', cursive;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-* {font-family: 'Roboto', sans-serif;}
-
-
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
 /* MEDIA QUERIES 620PX */
-
 @media screen and (max-width: 620px) {
-    
-    /* HEADER */
-    #conteneurheaderlogo{
-        display: flex;
-        justify-content: center;        
-    }
-    
-    #headerlogo{
-         width: 50%;
-    }
-
-    /* SECTION RECHERCHE */
-
-    #recherche{
-        background-color: #f5f8f7;
-    }
-
-    #lignerecherche{
-        display: flex;
-        background-color: #f2f2f2;
-        height: auto;
-        justify-content: center;
-    }
-
-    #conteneuriconmap{
-        display: flex;
-        margin-right: 15px;
-        align-items: center;
-        
-    }
-
-    #iconmap{
-        font-size: 20px;
-        width: 100%;
-    }
-
-    #conteneurchampsrecherche{
-       display: flex;
-       justify-content: center;   
-        
-    }
-
-    #champsrecherche{
-        height: 50px;
-        border: none;
-        background-color:#f2f2f2;
-        font-size : 18px;            
-    }
-
-    h1{
-        font-size: 40px;
-        text-align: center;
-    }
-
-    #recherche p{
-        font-size: 25px;
-        text-align: center;
-    }
-
-    #conteneurboutonexplorer{
-        display: flex;
-        justify-content: center;
-    }
-    #boutonexplorer{
-        border-radius: 20px;
-        color: ;
-       
-    }
-
-    /* SECTION FONCTIONNEMENT */
-
-    /* SECTION RESTAURANT */
-    .photoresto{
-        width: 100%;
-    }
-
-    /* FOOTER */
-
+  /* HEADER */
+  #conteneurheaderlogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #headerlogo {
+    width: 50%;
+  }
+  /* SECTION RECHERCHE */
+  #recherche {
+    background-color: #f5f8f7;
+  }
+  #lignerecherche {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f2f2f2;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #conteneuriconmap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #iconmap {
+    font-size: 20px;
+    width: 100%;
+    color: #9356DC;
+  }
+  #conteneurchampsrecherche {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #champsrecherche {
+    height: 50px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: "Shrikhand", cursive;
+  }
+  #recherche p {
+    font-size: 25px;
+    text-align: center;
+  }
+  #conteneurboutonexplorer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #boutonexplorer {
+    border-radius: 20px;
+    color: red;
+    font-size: 18px;
+  }
+  /* SECTION FONCTIONNEMENT */
+  /* SECTION RESTAURANT */
+  .photoresto {
+    width: 100%;
+  }
+  /* FOOTER */
 }
+/*# sourceMappingURL=styles.css.map */

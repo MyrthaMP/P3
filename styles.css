@@ -12,7 +12,7 @@ h1 {
 /* MEDIA QUERIES 620PX */
 @media screen and (max-width: 620px) {
   /* HEADER */
-  #conteneurheaderlogo {
+  #headerconteneurlogo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20,14 +20,14 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #headerlogo {
+  #headerconteneurlogo__logo {
     width: 50%;
   }
   /* SECTION RECHERCHE */
   #recherche {
     background-color: #f5f8f7;
   }
-  #lignerecherche {
+  #recherche__lignerecherche {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -74,7 +74,7 @@ h1 {
     font-size: 25px;
     text-align: center;
   }
-  #conteneurboutonexplorer {
+  #recherche__conteneurboutonexplorer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -84,12 +84,12 @@ h1 {
   }
   #boutonexplorer {
     border-radius: 20px;
-    color: red;
     font-size: 18px;
+    color: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
   }
   /* SECTION FONCTIONNEMENT */
   /* SECTION RESTAURANT */
-  .photoresto {
+  .restaurant__carte__photo {
     width: 100%;
   }
   /* FOOTER */

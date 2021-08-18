@@ -19,12 +19,12 @@ $police1: 'Shrikhand', cursive;
 @media screen and (max-width: 620px) {
     
     /* HEADER */
-    #conteneurheaderlogo{
+    #headerconteneurlogo{
         display: flex;
         justify-content: center;        
     }
     
-    #headerlogo{
+    #headerconteneurlogo__logo{
          width: 50%;
     }
 
@@ -34,7 +34,7 @@ $police1: 'Shrikhand', cursive;
         background-color: #f5f8f7;
     }
 
-    #lignerecherche{
+    #recherche__lignerecherche{
         display: flex;
         background-color: #f2f2f2;
         height: auto;
@@ -78,14 +78,14 @@ $police1: 'Shrikhand', cursive;
         text-align: center;
     }
 
-    #conteneurboutonexplorer{
+    #recherche__conteneurboutonexplorer{
         display: flex;
         justify-content: center;
     }
     #boutonexplorer{
         border-radius: 20px;
-        color: red;
         font-size: 18px;
+        color: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
         
        
     }
@@ -93,7 +93,7 @@ $police1: 'Shrikhand', cursive;
     /* SECTION FONCTIONNEMENT */
 
     /* SECTION RESTAURANT */
-    .photoresto{
+    .restaurant__carte__photo{
         width: 100%;
     }
 

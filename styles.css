@@ -20,14 +20,14 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #headerconteneurlogo__logo {
+  #headerconteneurlogo img {
     width: 50%;
   }
   /* SECTION RECHERCHE */
   #recherche {
     background-color: #f5f8f7;
   }
-  #recherche__lignerecherche {
+  #recherche #recherche__lignerecherche {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -37,7 +37,7 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #conteneuriconmap {
+  #recherche #recherche__lignerecherche #conteneuriconmap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -46,12 +46,12 @@ h1 {
         -ms-flex-align: center;
             align-items: center;
   }
-  #iconmap {
+  #recherche #recherche__lignerecherche #conteneuriconmap #iconmap {
     font-size: 20px;
     width: 100%;
     color: #9356DC;
   }
-  #conteneurchampsrecherche {
+  #recherche #recherche__lignerecherche #conteneurchampsrecherche {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,13 +59,13 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #champsrecherche {
+  #recherche #recherche__lignerecherche #conteneurchampsrecherche #champsrecherche {
     height: 50px;
     border: none;
     background-color: #f2f2f2;
     font-size: 18px;
   }
-  h1 {
+  #recherche h1 {
     font-size: 40px;
     text-align: center;
     font-family: "Shrikhand", cursive;
@@ -74,7 +74,7 @@ h1 {
     font-size: 25px;
     text-align: center;
   }
-  #recherche__conteneurboutonexplorer {
+  #recherche #recherche__conteneurboutonexplorer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -82,7 +82,7 @@ h1 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #boutonexplorer {
+  #recherche #recherche__conteneurboutonexplorer #boutonexplorer {
     border-radius: 20px;
     font-size: 18px;
     background-image: -webkit-gradient(linear, left top, right bottom, from(#f90fdb), color-stop(#e00dcd), color-stop(#c70bbe), color-stop(#af07af), to(#98049f));

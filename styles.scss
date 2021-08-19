@@ -21,73 +21,77 @@ $police1: 'Shrikhand', cursive;
     /* HEADER */
     #headerconteneurlogo{
         display: flex;
-        justify-content: center;        
+        justify-content: center;
+        
+        img {
+            width: 50%;
+        }
     }
     
-    #headerconteneurlogo__logo{
-         width: 50%;
-    }
-
+  
     /* SECTION RECHERCHE */
 
     #recherche{
         background-color: #f5f8f7;
-    }
 
-    #recherche__lignerecherche{
-        display: flex;
-        background-color: #f2f2f2;
-        height: auto;
-        justify-content: center;
-    }
+        #recherche__lignerecherche{
+            display: flex;
+            background-color: #f2f2f2;
+            height: auto;
+            justify-content: center;
 
-    #conteneuriconmap{
-        display: flex;
-        margin-right: 15px;
-        align-items: center;
+            #conteneuriconmap{
+                display: flex;
+                margin-right: 15px;
+                align-items: center;
+
+                    #iconmap{
+                        font-size: 20px;
+                        width: 100%;
+                        color: $couleursprincipales;
+                    }
+            }
+    
+            #conteneurchampsrecherche{
+                display: flex;
+                justify-content: center; 
+           
+                #champsrecherche{
+                    height: 50px;
+                    border: none;
+                    background-color:#f2f2f2;
+                    font-size : 18px;            
+                }
+            
+            }
+            
+        } 
+           
+            
+        h1{
+            font-size: 40px;
+            text-align: center;
+            font-family: $police1;
+        }
+    
+        p{
+            font-size: 25px;
+            text-align: center;
+        }
+    
+        #recherche__conteneurboutonexplorer{
+            display: flex;
+            justify-content: center;
+
+                #boutonexplorer{
+                    border-radius: 20px;
+                    font-size: 18px;
+                    background-image: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
+                }
+        }
         
     }
-
-    #iconmap{
-        font-size: 20px;
-        width: 100%;
-        color: $couleursprincipales;
-    }
-
-    #conteneurchampsrecherche{
-       display: flex;
-       justify-content: center;   
-        
-    }
-
-    #champsrecherche{
-        height: 50px;
-        border: none;
-        background-color:#f2f2f2;
-        font-size : 18px;            
-    }
-
-    h1{
-        font-size: 40px;
-        text-align: center;
-        font-family: $police1;
-    }
-
-    #recherche p{
-        font-size: 25px;
-        text-align: center;
-    }
-
-    #recherche__conteneurboutonexplorer{
-        display: flex;
-        justify-content: center;
-    }
-    #boutonexplorer{
-        border-radius: 20px;
-        font-size: 18px;
-        background-image: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
-        
-    }
+    
 
     /* SECTION FONCTIONNEMENT */
 

@@ -1,12 +1,13 @@
 /* MES VARIABLES */
+/* POLICES */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-h1 {
-  font-family: 'Shrikhand', cursive;
+* {
+  font-family: "Shrikhand", cursive;
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* MEDIA QUERIES 620PX */
@@ -49,7 +50,6 @@ h1 {
   #recherche #recherche__lignerecherche #conteneuriconmap #iconmap {
     font-size: 20px;
     width: 100%;
-    color: #9356DC;
   }
   #recherche #recherche__lignerecherche #conteneurchampsrecherche {
     display: -webkit-box;
@@ -68,7 +68,8 @@ h1 {
   #recherche h1 {
     font-size: 40px;
     text-align: center;
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
   }
   #recherche p {
     font-size: 25px;
@@ -83,16 +84,78 @@ h1 {
             justify-content: center;
   }
   #recherche #recherche__conteneurboutonexplorer #boutonexplorer {
-    border-radius: 20px;
+    color: white;
+    border-radius: 40px;
     font-size: 18px;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#f90fdb), color-stop(#e00dcd), color-stop(#c70bbe), color-stop(#af07af), to(#98049f));
-    background-image: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
+    padding: 20px;
+    background: #ff79da;
+    background: linear-gradient(127deg, #ff79da 20%, #9356dc 100%);
+    border: none;
   }
   /* SECTION FONCTIONNEMENT */
+  .fonctionnement__boutons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .fonctionnement__boutons .num {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    color: white;
+    background-color: #9356DC;
+    padding: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10px;
+  }
+  .fonctionnement__boutons .fas {
+    font-size: 20px;
+  }
+  .fonctionnement__boutons .bouton {
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #f5f8f7;
+    margin-left: -10px;
+  }
   /* SECTION RESTAURANT */
-  .restaurant__carte__photo {
+  #restaurant {
+    background-color: #f5f8f7;
+  }
+  #restaurant .restaurant__carte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 30px;
+    width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #restaurant .restaurant__carte .restaurant__carte__photo {
     width: 100%;
+    border-radius: 0 10px 10px 0;
   }
   /* FOOTER */
+  footer {
+    background-color: grey;
+    color: white;
+  }
+  footer h4 {
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

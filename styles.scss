@@ -1,18 +1,22 @@
 /* MES VARIABLES */ 
-$couleursprincipales : #9356DC;  
-$police1: 'Shrikhand', cursive;
-
-
-
-
+$violet : #9356DC;
+$rose : #FF79DA;
+$vert: #99E2D0;
+$noir: black;
+$blanc: white;
+$grisclair:  #f5f8f7; 
+$policeshrikhand: 'Shrikhand', cursive;
+$policeroboto: 'Roboto', sans-serif;
+ 
+/* POLICES */
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
- h1 {font-family: 'Shrikhand', cursive;}
+ *{font-family: $policeshrikhand}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-* {font-family: 'Roboto', sans-serif;}
+ *{font-family: $policeroboto;}
 
-
+ 
 
 /* MEDIA QUERIES 620PX */
 
@@ -24,7 +28,7 @@ $police1: 'Shrikhand', cursive;
         justify-content: center;
         
         img {
-            width: 50%;
+            width: 50%;           
         }
     }
     
@@ -32,7 +36,7 @@ $police1: 'Shrikhand', cursive;
     /* SECTION RECHERCHE */
 
     #recherche{
-        background-color: #f5f8f7;
+        background-color: $grisclair;
 
         #recherche__lignerecherche{
             display: flex;
@@ -47,8 +51,7 @@ $police1: 'Shrikhand', cursive;
 
                     #iconmap{
                         font-size: 20px;
-                        width: 100%;
-                        color: $couleursprincipales;
+                        width: 100%; 
                     }
             }
     
@@ -71,7 +74,8 @@ $police1: 'Shrikhand', cursive;
         h1{
             font-size: 40px;
             text-align: center;
-            font-family: $police1;
+            font-family: $policeroboto;
+            font-weight: bold;
         }
     
         p{
@@ -84,9 +88,13 @@ $police1: 'Shrikhand', cursive;
             justify-content: center;
 
                 #boutonexplorer{
-                    border-radius: 20px;
+                    color: white;
+                    border-radius: 40px;
                     font-size: 18px;
-                    background-image: linear-gradient(to right bottom, #f90fdb, #e00dcd, #c70bbe, #af07af, #98049f);
+                    padding: 20px;
+                    background: rgb(255,121,218);
+                    background: linear-gradient(127deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
+                    border: none;
                 }
         }
         
@@ -95,11 +103,75 @@ $police1: 'Shrikhand', cursive;
 
     /* SECTION FONCTIONNEMENT */
 
-    /* SECTION RESTAURANT */
-    .restaurant__carte__photo{
-        width: 100%;
+    .fonctionnement__boutons{
+        display: flex;
+        margin-bottom: 20px;
+
+        .num{
+            display: flex;
+            border-radius: 50%;
+            color:$blanc ;
+            background-color: $violet;
+            padding: 10px;
+            align-items: center;
+            height: 10px;
+            
+        }
+
+        .fas{
+            font-size: 20px;
+        }
+
+        .bouton{
+            border-radius: 20px;
+            padding: 25px;
+            width: 90%;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: $grisclair;
+            margin-left: -10px;
+            
+            
+           
+            
+        }
     }
 
+    /* SECTION RESTAURANT */
+
+    #restaurant{
+        background-color: $grisclair;
+
+       .restaurant__carte{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: $blanc;
+        margin-bottom: 30px;
+        width: 90%;
+        justify-content: center;
+
+            .restaurant__carte__photo{
+            width: 100%;
+            border-radius: 0 10px 10px 0;
+            }
+        }
+
+    }
+
+    
+    
+
     /* FOOTER */
+
+    footer{
+        background-color: grey;
+        color: white;
+
+        h4{
+            font-family: $policeshrikhand;
+            font-weight: bold;
+        }
+    }
 
 }

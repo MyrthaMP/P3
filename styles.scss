@@ -7,6 +7,11 @@ $blanc: white;
 $grisclair:  #f5f8f7; 
 $policeshrikhand: 'Shrikhand', cursive;
 $policeroboto: 'Roboto', sans-serif;
+$paddingTopSection: 40px;
+$paddingBottomSection: 70px;
+$ombre: 1px 18px 15px -9px rgba(0,0,0,0.56);
+
+
  
 /* POLICES */
 
@@ -37,6 +42,7 @@ $policeroboto: 'Roboto', sans-serif;
 
     #recherche{
         background-color: $grisclair;
+        padding-bottom: $paddingBottomSection;
 
         #recherche__lignerecherche{
             display: flex;
@@ -76,6 +82,7 @@ $policeroboto: 'Roboto', sans-serif;
             text-align: center;
             font-family: $policeroboto;
             font-weight: bold;
+
         }
     
         p{
@@ -88,13 +95,15 @@ $policeroboto: 'Roboto', sans-serif;
             justify-content: center;
 
                 #boutonexplorer{
+                    
                     color: white;
                     border-radius: 40px;
                     font-size: 18px;
                     padding: 20px;
                     background: rgb(255,121,218);
-                    background: linear-gradient(127deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
+                    background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
+                    box-shadow: $ombre;
                 }
         }
         
@@ -103,61 +112,83 @@ $policeroboto: 'Roboto', sans-serif;
 
     /* SECTION FONCTIONNEMENT */
 
-    .fonctionnement__boutons{
-        display: flex;
-        margin-bottom: 20px;
+    #fonctionnement{
+        padding-top: $paddingTopSection;
+        padding-bottom: $paddingBottomSection;
 
-        .num{
+
+        .ensemble__fonctionnement__boutons{
             display: flex;
-            border-radius: 50%;
-            color:$blanc ;
-            background-color: $violet;
-            padding: 10px;
             align-items: center;
-            height: 10px;
-            
-        }
+        }    
+        .fonctionnement__boutons{
+            display: flex;        
+            margin-top: 30px;
 
-        .fas{
-            font-size: 20px;
-        }
-
-        .bouton{
-            border-radius: 20px;
-            padding: 25px;
-            width: 90%;
-            font-size: 15px;
-            font-weight: bold;
-            background-color: $grisclair;
-            margin-left: -10px;
-            
-            
            
-            
-        }
+
+                .num{
+                    display: flex;
+                    border-radius: 50%;
+                    color:$blanc ;
+                    background-color: $violet;
+                    padding: 10px;
+                    align-items: center;
+                    height: 10px;
+                    
+                }
+
+                .fas{
+                    font-size: 20px;
+                }
+
+                .bouton{
+                    border-radius: 20px;
+                    padding: 25px;
+                    width: 90%;
+                    font-size: 15px;
+                    font-weight: bold;
+                    background-color: $grisclair;
+                    margin-left: -20px;
+                    border: none;
+                    box-shadow: $ombre;                   
+                    
+                }
+
+
+            }
+
+    
     }
 
     /* SECTION RESTAURANT */
 
     #restaurant{
+        
+        background-color: $grisclair;
+        padding-top: $paddingTopSection;
+        padding-bottom: $paddingBottomSection;
+
+        .ensemble__restaurant__carte{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $grisclair;
+        }
 
        .restaurant__carte{
         display: flex;
         flex-direction: column;
-        border-radius: 10px;
+        border-radius: 20px;
         background-color: $blanc;
-        margin-bottom: 30px;
+        margin-top: 30px;
         width: 90%;
+        box-shadow: $ombre;
         
 
             .restaurant__carte__photo{
                 width: 100%;
                 height: 300px;
-                border-radius: 10px 10px 0 0;
+                border-radius: 20px 20px 0 0;
                 
             }
 

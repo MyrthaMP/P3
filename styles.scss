@@ -12,6 +12,25 @@ $paddingBottomSection: 70px;
 $ombre: 1px 18px 15px -9px rgba(0,0,0,0.56);
 $paddingLeftDuTexteSousPhotoRestaurant : 20px;
 
+/* VARIABLES HEADER */ 
+$HeaderConteneurLogoDisplay : flex;
+$HeaderConteneurLogoJustifyContent : center;
+$HeaderConteneurLogoPadding : 20px;
+$HeaderImgWidth : 50%;
+
+/* VARIABLES FOOTER */
+$FooterBackgroundColor : $noir;
+$FooterColor : $blanc;
+$FooterBlocPadding : 30px;
+$Footerh4FontFamily : $policeshrikhand;
+$Footerh4FontWeight : bold;
+$Footerh4MarginBlockStart : 0em;
+$FooterFasFoat : left;
+$FooterTexteMarginLeft: 30px;
+$FooterATextDecoration: none;
+$FooterAColor : $blanc; 
+
+
 
  
 /* POLICES */
@@ -26,12 +45,12 @@ $paddingLeftDuTexteSousPhotoRestaurant : 20px;
     
     /* HEADER */
     #headerconteneurlogo{
-        display: flex;
-        justify-content: center;
-        padding : 20px;
+        display: $HeaderConteneurLogoDisplay;
+        justify-content: $HeaderConteneurLogoJustifyContent;
+        padding : $HeaderConteneurLogoPadding;
         
         img {
-            width: 50%;           
+            width: $HeaderImgWidth;           
         }
     }
     
@@ -247,29 +266,29 @@ $paddingLeftDuTexteSousPhotoRestaurant : 20px;
     /* FOOTER */
 
     footer{
-        background-color: $noir;
-        color: $blanc;
+        background-color: $FooterBackgroundColor;
+        color: $FooterColor;
 
         .footer__bloc{
-            padding: 30px;
+            padding: $FooterBlocPadding;
             
                 h4{
-                font-family: $policeshrikhand;
-                font-weight: bold;
-                margin-block-start: 0em;
+                font-family: $Footerh4FontFamily;
+                font-weight: $Footerh4FontWeight;
+                margin-block-start: $Footerh4MarginBlockStart;
             }
 
             .fas{
-                float: left;
+                float: $FooterFasFoat;
             }
 
             .texte{
-                margin-left: 30px;
+                margin-left: $FooterTexteMarginLeft;
             }
 
             a{
-                text-decoration: none;
-                color: $blanc;
+                text-decoration: $FooterATextDecoration;
+                color: $FooterAColor;
             }
 
         }

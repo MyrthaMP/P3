@@ -1,6 +1,7 @@
 /* MES VARIABLES */
 /* VARIABLES HEADER */
 /* VARIABLES FOOTER */
+/* VARIABLES PAGES DE MENU */
 /* POLICES */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
@@ -257,6 +258,8 @@
 footer {
   background-color: black;
   color: white;
+  /* PAGE MENU */
+  /* section menu */
 }
 
 footer .footer__bloc {
@@ -281,5 +284,10 @@ footer .footer__bloc .texte {
 footer .footer__bloc a {
   text-decoration: none;
   color: white;
+}
+
+footer .menu__photo {
+  height: 100px;
+  width: auto;
 }
 /*# sourceMappingURL=styles.css.map */

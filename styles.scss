@@ -30,6 +30,7 @@ $FooterTexteMarginLeft: 30px;
 $FooterATextDecoration: none;
 $FooterAColor : $blanc; 
 
+/* VARIABLES PAGES DE MENU */ 
 
 
  
@@ -294,6 +295,14 @@ $FooterAColor : $blanc;
         }
 
        
-    
+    /* PAGE MENU */ 
+
+    /* section menu */
+
+        .menu__photo{
+            height: 100px;
+            width: auto;
+        }
+        
 
 }

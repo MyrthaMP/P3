@@ -13,6 +13,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 /* HEADER */
 #headerconteneurlogo {
   display: -webkit-box;
@@ -58,6 +62,7 @@
 #recherche #recherche__lignerecherche #conteneuriconmap #iconmap {
   font-size: 20px;
   width: 100%;
+  margin-left: 75px;
 }
 
 #recherche #recherche__lignerecherche #conteneurchampsrecherche {
@@ -74,10 +79,11 @@
   border: none;
   background-color: #f2f2f2;
   font-size: 18px;
+  font-weight: bold;
 }
 
 #recherche h1 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -116,26 +122,21 @@
   padding-bottom: 70px;
 }
 
+#fonctionnement h2 {
+  margin-left: 10px;
+}
+
 #fonctionnement .ensemble__fonctionnement__boutons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #fonctionnement .fonctionnement__boutons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
+  margin: 30px;
   border-radius: 20px;
   padding: 25px;
   -webkit-box-pack: center;
@@ -148,7 +149,7 @@
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   text-decoration: none;
-  width: 75%;
+  width: auto;
 }
 
 #fonctionnement .fonctionnement__boutons a {
@@ -156,6 +157,7 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  width: 100%;
 }
 
 #fonctionnement .fonctionnement__boutons a .num {
@@ -171,15 +173,21 @@
           align-items: center;
   height: 10px;
   width: 10px;
+  margin-left: -39px;
 }
 
 #fonctionnement .fonctionnement__boutons a .fas {
   font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: grey;
 }
 
 #fonctionnement .fonctionnement__boutons a .bouton {
   border: none;
   background-color: #f5f8f7;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /* SECTION RESTAURANT */
@@ -187,6 +195,10 @@
   background-color: #f5f8f7;
   padding-top: 40px;
   padding-bottom: 70px;
+}
+
+#restaurant h2 {
+  margin-left: 10px;
 }
 
 #restaurant .ensemble__restaurant__carte {

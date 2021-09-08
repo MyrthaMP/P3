@@ -42,7 +42,9 @@ $FooterAColor : $blanc;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
  *{font-family: $policeroboto;}
 
- 
+    body{
+        margin: 0;
+    }
     
     /* HEADER */
     #headerconteneurlogo{
@@ -75,7 +77,8 @@ $FooterAColor : $blanc;
 
                     #iconmap{
                         font-size: 20px;
-                        width: 100%; 
+                        width: 100%;
+                        margin-left: 75px; 
                     }
             }
     
@@ -87,7 +90,10 @@ $FooterAColor : $blanc;
                     height: 50px;
                     border: none;
                     background-color:#f2f2f2;
-                    font-size : 18px;            
+                    font-size : 18px;
+                    font-weight: bold;
+                    
+                               
                 }
             
             }
@@ -96,7 +102,7 @@ $FooterAColor : $blanc;
            
             
         h1{
-            font-size: 40px;
+            font-size: 30px;
             text-align: center;
             font-family: $policeroboto;
             font-weight: bold;
@@ -134,18 +140,20 @@ $FooterAColor : $blanc;
         padding-top: $paddingTopSection;
         padding-bottom: $paddingBottomSection;
 
+        h2{
+            margin-left: 10px;
+        }
+
 
         .ensemble__fonctionnement__boutons{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+          display: flex;
+            
             
         }  
 
             .fonctionnement__boutons{
                 display: flex;      
-                margin-top: 30px;
+                margin: 30px;
                 border-radius: 20px;
                 padding: 25px;
                 justify-content: center;
@@ -155,11 +163,15 @@ $FooterAColor : $blanc;
                 border: none;
                 box-shadow: $ombre;
                 text-decoration: none;
-                width: 75%;
+                width: auto;
+                
+                
 
                     a{
                         display: flex;
                         text-decoration: none;
+                        width: 100%;
+                        
 
                         .num{
                             display: flex;
@@ -169,19 +181,26 @@ $FooterAColor : $blanc;
                             padding: 10px;
                             align-items: center;
                             height: 10px;
-                            width: 10px; 
+                            width: 10px;
+                            margin-left: -39px;
+                             
                                                       
                             
                         }
         
                         .fas{
                             font-size: 20px;
+                            margin-left: 20px;
+                            margin-right: 20px;
+                            color: grey;
                         
                         }
         
                         .bouton{
                             border: none;
                             background-color: $grisclair;
+                            font-weight: bold;
+                            font-size: 16px;
                         }
 
                     }
@@ -201,6 +220,10 @@ $FooterAColor : $blanc;
         background-color: $grisclair;
         padding-top: $paddingTopSection;
         padding-bottom: $paddingBottomSection;
+
+        h2{
+            margin-left: 10px;
+        }
 
         .ensemble__restaurant__carte{
         display: flex;

@@ -319,11 +319,11 @@ footer .footer__bloc a {
   margin-top: -50px;
 }
 
-#menu .carte .entrée h2 {
+#menu .carte .partiedumenu h2 {
   font-size: 14px;
 }
 
-#menu .carte .entrée .choix {
+#menu .carte .partiedumenu .choix {
   background-color: white;
   border-radius: 20px;
   margin: 10px;
@@ -332,11 +332,11 @@ footer .footer__bloc a {
   padding: 10px;
 }
 
-#menu .carte .entrée .choix h3 {
+#menu .carte .partiedumenu .choix h3 {
   margin: 0px;
 }
 
-#menu .carte .entrée .choix .détail {
+#menu .carte .partiedumenu .choix .détail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,13 +345,40 @@ footer .footer__bloc a {
           justify-content: space-between;
 }
 
-#menu .carte .entrée .choix .détail p {
+#menu .carte .partiedumenu .choix .détail p {
   margin-bottom: 0;
   margin-top: 5px;
 }
 
-#menu .carte .entrée .choix .détail p:last-child {
+#menu .carte .partiedumenu .choix .détail p:last-child {
   font-weight: bold;
   margin-right: 10px;
+}
+
+#menu .carte .conteneurboutoncommander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu .carte .conteneurboutoncommander .boutoncouleurdégradée {
+  color: white;
+  border-radius: 40px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 20%, #9356dc 100%);
+  border: none;
+  -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
+          box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
 }
 /*# sourceMappingURL=styles.css.map */

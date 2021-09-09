@@ -344,7 +344,7 @@ $FooterAColor : $blanc;
             border-radius: 20px 20px 0 0 ;
             margin-top: -50px;
 
-            .entrée{
+            .partiedumenu{
                 h2{
                     font-size: 14px;
                 }
@@ -373,6 +373,27 @@ $FooterAColor : $blanc;
                             margin-right: 10px;
                         }
                     }
+                }
+            }
+
+            .conteneurboutoncommander{
+                display: flex;
+                justify-content: center;
+
+                .boutoncouleurdégradée{                    
+                    color: white;
+                    border-radius: 40px;
+                    font-size: 16px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    background: rgb(255,121,218);
+                    background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
+                    border: none;
+                    box-shadow: $ombre;
                 }
             }
         }

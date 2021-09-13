@@ -306,6 +306,26 @@ footer .footer__bloc a {
 
 /* PAGE MENU */
 /* section menu */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .conteneurflèche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+}
+
+header .fas {
+  font-size: 25px;
+}
+
 #menu .menu__photo {
   height: 240px;
   width: 100%;
@@ -319,8 +339,35 @@ footer .footer__bloc a {
   margin-top: -50px;
 }
 
+#menu .carte .conteneurh1iconcoeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#menu .carte .conteneurh1iconcoeur h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 26px;
+}
+
+#menu .carte .conteneurh1iconcoeur .conteneuriconcoeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
+  font-size: 24px;
+}
+
 #menu .carte .partiedumenu h2 {
   font-size: 14px;
+  margin-left: 10px;
 }
 
 #menu .carte .partiedumenu .choix {

@@ -330,6 +330,20 @@ $FooterAColor : $blanc;
 
     /* section menu */
 
+    header{
+        display: flex;
+
+        .conteneurflèche{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+        }
+        .fas{
+            font-size: 25px;
+        }
+    }
+
     #menu{
       
         .menu__photo{
@@ -344,9 +358,29 @@ $FooterAColor : $blanc;
             border-radius: 20px 20px 0 0 ;
             margin-top: -50px;
 
+            .conteneurh1iconcoeur{
+                display: flex;
+                justify-content: space-around;
+
+                h1{
+                    font-family: $policeshrikhand;
+                    font-size: 26px;
+                }
+
+                .conteneuriconcoeur{
+                    display: flex;
+                    align-items: center;
+
+                    .far{
+                        font-size: 24px;
+                    }
+                }
+            }
+
             .partiedumenu{
                 h2{
                     font-size: 14px;
+                    margin-left: 10px;
                 }
                 .choix{
                     background-color: $blanc;

@@ -15,7 +15,9 @@ $paddingLeftDuTexteSousPhotoRestaurant : 20px;
 /* VARIABLES HEADER */ 
 $HeaderConteneurLogoDisplay : flex;
 $HeaderConteneurLogoJustifyContent : center;
-$HeaderConteneurLogoPadding : 20px;
+$HeaderConteneurLogoPaddingTop : 20px;
+$HeaderConteneurLogoPaddingBottom : 20px;
+$HeaderConteneurLogoWidth : 100%;
 $HeaderImgWidth : 50%;
 
 /* VARIABLES FOOTER */
@@ -50,7 +52,9 @@ $FooterAColor : $blanc;
     #headerconteneurlogo{
         display: $HeaderConteneurLogoDisplay;
         justify-content: $HeaderConteneurLogoJustifyContent;
-        padding : $HeaderConteneurLogoPadding;
+        padding-top : $HeaderConteneurLogoPaddingTop;
+        padding-bottom: $HeaderConteneurLogoPaddingBottom;
+        width: $HeaderConteneurLogoWidth;
         
         img {
             width: $HeaderImgWidth;           
@@ -336,12 +340,29 @@ $FooterAColor : $blanc;
         .conteneurflèche{
             display: flex;
             align-items: center;
-            margin-left: 30px;
+            justify-content: flex-end;
+            width: 10%;
+            
+            .fas{
+            font-size: 25px;
+            }
 
         }
-        .fas{
-            font-size: 25px;
+
+        .restaurant__headerconteneurlogo{
+            display: $HeaderConteneurLogoDisplay;
+            justify-content: $HeaderConteneurLogoJustifyContent;
+            padding-top : $HeaderConteneurLogoPaddingTop;
+            padding-bottom: $HeaderConteneurLogoPaddingBottom;
+            width: 90%;
+        
+            img {
+                width: $HeaderImgWidth;
+                margin-left: -50px;           
+            }
+
         }
+        
     }
 
     #menu{
@@ -360,7 +381,7 @@ $FooterAColor : $blanc;
 
             .conteneurh1iconcoeur{
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
 
                 h1{
                     font-family: $policeshrikhand;
@@ -370,6 +391,7 @@ $FooterAColor : $blanc;
                 .conteneuriconcoeur{
                     display: flex;
                     align-items: center;
+                    margin-left: 37px;
 
                     .far{
                         font-size: 24px;

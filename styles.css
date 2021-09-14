@@ -26,7 +26,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 #headerconteneurlogo img {
@@ -319,11 +321,31 @@ header .conteneurflèche {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 10%;
 }
 
-header .fas {
+header .conteneurflèche .fas {
   font-size: 25px;
+}
+
+header .restaurant__headerconteneurlogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+}
+
+header .restaurant__headerconteneurlogo img {
+  width: 50%;
+  margin-left: -50px;
 }
 
 #menu .menu__photo {
@@ -343,8 +365,9 @@ header .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #menu .carte .conteneurh1iconcoeur h1 {
@@ -359,6 +382,7 @@ header .fas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 37px;
 }
 
 #menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {

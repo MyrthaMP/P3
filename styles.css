@@ -35,6 +35,12 @@ body {
   width: 50%;
 }
 
+@media screen and (min-width: 375px) {
+  #headerconteneurlogo img {
+    max-width: 300px;
+  }
+}
+
 /* SECTION RECHERCHE */
 #recherche {
   background-color: #f5f8f7;
@@ -329,6 +335,7 @@ header .conteneurflèche {
 
 header .conteneurflèche .fas {
   font-size: 25px;
+  color: black;
 }
 
 header .restaurant__headerconteneurlogo {
@@ -348,11 +355,19 @@ header .restaurant__headerconteneurlogo img {
   margin-left: -50px;
 }
 
+@media screen and (min-width: 375px) {
+  header .restaurant__headerconteneurlogo img {
+    max-width: 300px;
+  }
+}
+
 #menu .menu__photo {
   height: 240px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
 }
 
 #menu .carte {

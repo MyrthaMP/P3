@@ -57,7 +57,11 @@ $FooterAColor : $blanc;
         width: $HeaderConteneurLogoWidth;
         
         img {
-            width: $HeaderImgWidth;           
+            width: $HeaderImgWidth;
+            @media screen and (min-width :375px){
+                max-width: 300px;
+                
+            }           
         }
     }
     
@@ -152,7 +156,6 @@ $FooterAColor : $blanc;
         .ensemble__fonctionnement__boutons{
           display: flex;
             
-            
         }  
 
             .fonctionnement__boutons{
@@ -168,7 +171,9 @@ $FooterAColor : $blanc;
                 box-shadow: $ombre;
                 text-decoration: none;
                 width: auto;
+
                 
+              
                 
 
                     a{
@@ -345,6 +350,7 @@ $FooterAColor : $blanc;
             
             .fas{
             font-size: 25px;
+            color: black;
             }
 
         }
@@ -358,26 +364,37 @@ $FooterAColor : $blanc;
         
             img {
                 width: $HeaderImgWidth;
-                margin-left: -50px;           
+                margin-left: -50px;
+                
+                @media screen and (min-width :375px){
+                    max-width: 300px;
+                }
             }
 
         }
         
     }
 
-    #menu{
-      
-        .menu__photo{
+    #menu{     
+ 
+      .menu__photo{
             height: 240px;
             width: 100%;
             object-fit: cover;
-            
+            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-size: cover;
+                   
         }
+        
+      
+       
 
         .carte{
             background-color: $grisclair;
             border-radius: 20px 20px 0 0 ;
             margin-top: -50px;
+            
+            
 
             .conteneurh1iconcoeur{
                 display: flex;

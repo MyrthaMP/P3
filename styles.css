@@ -161,6 +161,29 @@ body {
   width: auto;
 }
 
+#fonctionnement .fonctionnement__boutons :hover {
+  -webkit-animation: 3s 1s infinite both ombrevisible;
+          animation: 3s 1s infinite both ombrevisible;
+}
+
+@-webkit-keyframes ombrevisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ombrevisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
 #fonctionnement .fonctionnement__boutons a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,6 +430,14 @@ header .restaurant__headerconteneurlogo img {
 #menu .carte .partiedumenu h2 {
   font-size: 14px;
   margin-left: 10px;
+}
+
+#menu .carte .partiedumenu h2 after {
+  content: "";
+  background-color: #99E2D0;
+  display: block;
+  width: 50%;
+  margin-top: 3px;
 }
 
 #menu .carte .partiedumenu .choix {

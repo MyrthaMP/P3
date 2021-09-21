@@ -125,6 +125,16 @@ $FooterAColor : $blanc;
         #recherche__conteneurboutonexplorer{
             display: flex;
             justify-content: center;
+            
+            :hover{
+                box-shadow: darken($color: #000000, $amount: 5);
+                animation: 1s 0s 1 both éclaicissement             
+                }
+                @keyframes éclaicissement {
+                   from {opacity: 1;} 
+                   to {opacity: 0.7;}                    
+                }
+               
 
                 #boutonexplorer{
                     
@@ -135,7 +145,8 @@ $FooterAColor : $blanc;
                     background: rgb(255,121,218);
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
-                    box-shadow: $ombre;
+                    box-shadow: $ombre;                 
+                                      
                 }
         }
         
@@ -173,12 +184,12 @@ $FooterAColor : $blanc;
                 width: auto;
                 
                 :hover{
-                    animation: 3s 1s infinite both ombrevisible
+                    background-color:$grisclair;
+                    animation: 1s 0s 1 both éclaicissement
                 }
-                @keyframes ombrevisible {
+                @keyframes éclaicissement {
                    from {opacity: 1;} 
-                   to {opacity: 0.5;}
-                    
+                   to {opacity: 0.5;}                    
                 }
                 
               
@@ -189,6 +200,7 @@ $FooterAColor : $blanc;
                         text-decoration: none;
                         width: 100%;
                         
+                       
                       
 
                         .num{
@@ -219,14 +231,19 @@ $FooterAColor : $blanc;
                             background-color: $grisclair;
                             font-weight: bold;
                             font-size: 16px;
+
+                           
                         }
+                        
 
                     }
+                    
 
                 
 
                
             }
+            
 
     
     }
@@ -426,6 +443,9 @@ $FooterAColor : $blanc;
             }
 
             .partiedumenu{
+
+                
+
                 h2{
                     font-size: 14px;
                     margin-left: 10px;
@@ -471,11 +491,39 @@ $FooterAColor : $blanc;
                         }
                     }
                 }
+                               
+                
+            }
+            .entrée{
+                animation: 2s 1s 1 both apparition
+            }
+            .plat{
+                animation: 2s 3s 1 both apparition
+            }
+            .dessert{
+                animation: 2s 5s 1 both apparition
+            }
+            @keyframes apparition {
+                from {
+                opacity: 0;
+                }
+                
+                to {
+                opacity:1;
+                }
             }
 
             .conteneurboutoncommander{
                 display: flex;
                 justify-content: center;
+
+                :hover{
+                    animation: 1s 0s 1 both éclaicissement
+                    }
+                    @keyframes éclaicissement {
+                       from {opacity: 1;} 
+                       to {opacity: 0.7;}                    
+                    }
 
                 .boutoncouleurdégradée{                    
                     color: white;

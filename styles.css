@@ -164,6 +164,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #fonctionnement .fonctionnement__boutons {
@@ -188,11 +194,20 @@ body {
 
 #fonctionnement .fonctionnement__boutons :hover {
   background-color: #f5f8f7;
-  -webkit-animation: 1s 0s 1 both éclaicissement;
-          animation: 1s 0s 1 both éclaicissement;
+  -webkit-animation: 1s 0s 1 both éclaircissement;
+          animation: 1s 0s 1 both éclaircissement;
 }
 
-@keyframes éclaicissement {
+@-webkit-keyframes éclaircissement {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes éclaircissement {
   from {
     opacity: 1;
   }
@@ -256,11 +271,13 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: raw;
+          flex-direction: raw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #restaurant .restaurant__carte {
@@ -274,7 +291,7 @@ body {
   border-radius: 20px;
   background-color: white;
   margin-top: 30px;
-  width: 90%;
+  width: 50%;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
 }
@@ -401,7 +418,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-#menu .menu__photo {
+#menu .conteneurphoto {
   height: 240px;
   width: 100%;
   -o-object-fit: cover;
@@ -449,11 +466,12 @@ header .restaurant__headerconteneurlogo img {
   margin-left: 10px;
 }
 
-#menu .carte .partiedumenu h2 after {
+#menu .carte .partiedumenu h2::after {
+  display: block;
   content: "";
   background-color: #99E2D0;
-  display: block;
-  width: 50%;
+  width: 50px;
+  height: 3px;
   margin-top: 3px;
 }
 
@@ -532,11 +550,11 @@ header .restaurant__headerconteneurlogo img {
 }
 
 #menu .carte .conteneurboutoncommander :hover {
-  -webkit-animation: 1s 0s 1 both éclaicissement;
-          animation: 1s 0s 1 both éclaicissement;
+  -webkit-animation: 1s 0s 1 both éclaircissement;
+          animation: 1s 0s 1 both éclaircissement;
 }
 
-@keyframes éclaicissement {
+@keyframes éclaircissement {
   from {
     opacity: 1;
   }

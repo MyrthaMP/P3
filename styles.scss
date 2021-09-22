@@ -165,12 +165,17 @@ $FooterAColor : $blanc;
 
 
         .ensemble__fonctionnement__boutons{
-          display: flex;
+          
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            
+          
             
         }  
 
             .fonctionnement__boutons{
-                display: flex;      
+                display: flex;     
                 margin: 30px;
                 border-radius: 20px;
                 padding: 25px;
@@ -182,15 +187,17 @@ $FooterAColor : $blanc;
                 box-shadow: $ombre;
                 text-decoration: none;
                 width: auto;
+               
                 
                 :hover{
                     background-color:$grisclair;
-                    animation: 1s 0s 1 both éclaicissement
+                    animation: 1s 0s 1 both éclaircissement
                 }
-                @keyframes éclaicissement {
+                @keyframes éclaircissement {
                    from {opacity: 1;} 
                    to {opacity: 0.5;}                    
                 }
+                
                 
               
                 
@@ -262,8 +269,9 @@ $FooterAColor : $blanc;
 
         .ensemble__restaurant__carte{
         display: flex;
-        flex-direction: column;
+        flex-direction: raw;
         align-items: center;
+        flex-wrap: wrap;
         }
 
        .restaurant__carte{
@@ -272,7 +280,7 @@ $FooterAColor : $blanc;
         border-radius: 20px;
         background-color: $blanc;
         margin-top: 30px;
-        width: 90%;
+        width: 50%;
         box-shadow: $ombre;
 
             a{
@@ -403,7 +411,7 @@ $FooterAColor : $blanc;
 
     #menu{     
  
-      .menu__photo{
+      .conteneurphoto{
             height: 240px;
             width: 100%;
             object-fit: cover;
@@ -451,12 +459,13 @@ $FooterAColor : $blanc;
                     margin-left: 10px;
                     
 
-                    after {
-                        content: "";
-                        background-color: $vert;
-                        display: block;
-                        width: 50%;
-                        margin-top: 3px;
+                   &::after {
+                    display: block;
+                    content: "";
+                    background-color: $vert;
+                    width: 50px;
+                    height: 3px;
+                    margin-top: 3px;
                                                 
                     }
                     
@@ -518,9 +527,9 @@ $FooterAColor : $blanc;
                 justify-content: center;
 
                 :hover{
-                    animation: 1s 0s 1 both éclaicissement
+                    animation: 1s 0s 1 both éclaircissement
                     }
-                    @keyframes éclaicissement {
+                    @keyframes éclaircissement {
                        from {opacity: 1;} 
                        to {opacity: 0.7;}                    
                     }

@@ -113,8 +113,6 @@ body {
 }
 
 #recherche #recherche__conteneurboutonexplorer :hover {
-  -webkit-box-shadow: black;
-          box-shadow: black;
   -webkit-animation: 1s 0s 1 both éclaicissement;
           animation: 1s 0s 1 both éclaicissement;
 }
@@ -190,6 +188,13 @@ body {
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   text-decoration: none;
   width: auto;
+}
+
+@media screen and (min-width: 375px) {
+  #fonctionnement .fonctionnement__boutons {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 #fonctionnement .fonctionnement__boutons :hover {
@@ -291,9 +296,10 @@ body {
   border-radius: 20px;
   background-color: white;
   margin-top: 30px;
-  width: 50%;
+  width: auto;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
+  margin: 20px;
 }
 
 #restaurant .restaurant__carte a {
@@ -418,7 +424,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-#menu .conteneurphoto {
+.menu .conteneurphoto {
   height: 240px;
   width: 100%;
   -o-object-fit: cover;
@@ -427,13 +433,13 @@ header .restaurant__headerconteneurlogo img {
   background-size: cover;
 }
 
-#menu .carte {
+.menu .carte {
   background-color: #f5f8f7;
   border-radius: 20px 20px 0 0;
   margin-top: -50px;
 }
 
-#menu .carte .conteneurh1iconcoeur {
+.menu .carte .conteneurh1iconcoeur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,12 +448,12 @@ header .restaurant__headerconteneurlogo img {
           justify-content: center;
 }
 
-#menu .carte .conteneurh1iconcoeur h1 {
+.menu .carte .conteneurh1iconcoeur h1 {
   font-family: "Shrikhand", cursive;
   font-size: 26px;
 }
 
-#menu .carte .conteneurh1iconcoeur .conteneuriconcoeur {
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,16 +463,20 @@ header .restaurant__headerconteneurlogo img {
   margin-left: 37px;
 }
 
-#menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
   font-size: 24px;
 }
 
-#menu .carte .partiedumenu h2 {
+.menu .carte .partiedumenu {
+  margin-bottom: 40px;
+}
+
+.menu .carte .partiedumenu h2 {
   font-size: 14px;
   margin-left: 10px;
 }
 
-#menu .carte .partiedumenu h2::after {
+.menu .carte .partiedumenu h2::after {
   display: block;
   content: "";
   background-color: #99E2D0;
@@ -475,7 +485,7 @@ header .restaurant__headerconteneurlogo img {
   margin-top: 3px;
 }
 
-#menu .carte .partiedumenu .choix {
+.menu .carte .partiedumenu .choix {
   background-color: white;
   border-radius: 20px;
   margin: 10px;
@@ -484,11 +494,11 @@ header .restaurant__headerconteneurlogo img {
   padding: 10px;
 }
 
-#menu .carte .partiedumenu .choix h3 {
+.menu .carte .partiedumenu .choix h3 {
   margin: 0px;
 }
 
-#menu .carte .partiedumenu .choix .détail {
+.menu .carte .partiedumenu .choix .détail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,29 +507,29 @@ header .restaurant__headerconteneurlogo img {
           justify-content: space-between;
 }
 
-#menu .carte .partiedumenu .choix .détail p {
+.menu .carte .partiedumenu .choix .détail p {
   margin-bottom: 0;
   margin-top: 5px;
 }
 
-#menu .carte .partiedumenu .choix .détail p:last-child {
+.menu .carte .partiedumenu .choix .détail p:last-child {
   font-weight: bold;
   margin-right: 10px;
 }
 
-#menu .carte .entrée {
+.menu .carte .entrée {
   -webkit-animation: 2s 1s 1 both apparition;
           animation: 2s 1s 1 both apparition;
 }
 
-#menu .carte .plat {
-  -webkit-animation: 2s 3s 1 both apparition;
-          animation: 2s 3s 1 both apparition;
+.menu .carte .plat {
+  -webkit-animation: 2s 2s 1 both apparition;
+          animation: 2s 2s 1 both apparition;
 }
 
-#menu .carte .dessert {
-  -webkit-animation: 2s 5s 1 both apparition;
-          animation: 2s 5s 1 both apparition;
+.menu .carte .dessert {
+  -webkit-animation: 2s 3s 1 both apparition;
+          animation: 2s 3s 1 both apparition;
 }
 
 @-webkit-keyframes apparition {
@@ -540,7 +550,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-#menu .carte .conteneurboutoncommander {
+.menu .carte .conteneurboutoncommander {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,7 +559,7 @@ header .restaurant__headerconteneurlogo img {
           justify-content: center;
 }
 
-#menu .carte .conteneurboutoncommander :hover {
+.menu .carte .conteneurboutoncommander :hover {
   -webkit-animation: 1s 0s 1 both éclaircissement;
           animation: 1s 0s 1 both éclaircissement;
 }
@@ -563,7 +573,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-#menu .carte .conteneurboutoncommander .boutoncouleurdégradée {
+.menu .carte .conteneurboutoncommander .boutoncouleurdégradée {
   color: white;
   border-radius: 40px;
   font-size: 16px;
@@ -571,7 +581,7 @@ header .restaurant__headerconteneurlogo img {
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   background: #ff79da;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff79da), to(#9356dc));

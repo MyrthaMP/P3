@@ -127,7 +127,6 @@ $FooterAColor : $blanc;
             justify-content: center;
             
             :hover{
-                box-shadow: darken($color: #000000, $amount: 5);
                 animation: 1s 0s 1 both éclaicissement             
                 }
                 @keyframes éclaicissement {
@@ -145,10 +144,14 @@ $FooterAColor : $blanc;
                     background: rgb(255,121,218);
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
-                    box-shadow: $ombre;                 
+                    box-shadow: $ombre; 
+                                    
+                    
                                       
                 }
+                
         }
+        
         
     }
     
@@ -187,9 +190,14 @@ $FooterAColor : $blanc;
                 box-shadow: $ombre;
                 text-decoration: none;
                 width: auto;
+
+                @media screen and (min-width :375px){
+                    flex-wrap: nowrap;                   
+                    
+                }  
                
                 
-                :hover{
+                :hover{                  
                     background-color:$grisclair;
                     animation: 1s 0s 1 both éclaircissement
                 }
@@ -280,8 +288,11 @@ $FooterAColor : $blanc;
         border-radius: 20px;
         background-color: $blanc;
         margin-top: 30px;
-        width: 50%;
+        width: auto;
         box-shadow: $ombre;
+        margin: 20px;
+
+          
 
             a{
                 text-decoration: none;
@@ -409,7 +420,7 @@ $FooterAColor : $blanc;
         
     }
 
-    #menu{     
+    .menu{     
  
       .conteneurphoto{
             height: 240px;
@@ -451,8 +462,8 @@ $FooterAColor : $blanc;
             }
 
             .partiedumenu{
-
                 
+                margin-bottom: 40px;
 
                 h2{
                     font-size: 14px;
@@ -469,10 +480,7 @@ $FooterAColor : $blanc;
                                                 
                     }
                     
-                }
-
-                                
-
+                }                              
 
                 .choix{
                     background-color: $blanc;
@@ -507,10 +515,10 @@ $FooterAColor : $blanc;
                 animation: 2s 1s 1 both apparition
             }
             .plat{
-                animation: 2s 3s 1 both apparition
+                animation: 2s 2s 1 both apparition
             }
             .dessert{
-                animation: 2s 5s 1 both apparition
+                animation: 2s 3s 1 both apparition
             }
             @keyframes apparition {
                 from {
@@ -542,7 +550,7 @@ $FooterAColor : $blanc;
                     padding-bottom: 10px;
                     padding-left: 50px;
                     padding-right: 50px;
-                    margin-top: 50px;
+                    margin-top: 10px;
                     margin-bottom: 50px;
                     background: rgb(255,121,218);
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);

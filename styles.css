@@ -18,6 +18,67 @@ body {
   margin: 0;
 }
 
+.encart {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #727272c2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: 3s 0s 1 both loader;
+          animation: 3s 0s 1 both loader;
+  -webkit-animation: 3s 0s 1 both oterloader;
+          animation: 3s 0s 1 both oterloader;
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes oterloader {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes oterloader {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
@@ -33,10 +94,12 @@ body {
   border-radius: 50%;
   border: 6px solid #fff;
   border-color: black transparent black transparent;
-  -webkit-animation: lds-dual-ring 1s linear 3;
-          animation: lds-dual-ring 1s linear 3;
+  -webkit-animation: lds-dual-ring 1s linear infinite;
+          animation: lds-dual-ring 1s linear infinite;
   position: fixed;
-  z-index: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes lds-dual-ring {
@@ -155,29 +218,6 @@ body {
           justify-content: center;
 }
 
-#recherche #recherche__conteneurboutonexplorer :hover {
-  -webkit-animation: 1s 0s 1 both éclaicissement;
-          animation: 1s 0s 1 both éclaicissement;
-}
-
-@-webkit-keyframes éclaicissement {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-
-@keyframes éclaicissement {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-
 #recherche #recherche__conteneurboutonexplorer #boutonexplorer {
   color: white;
   border-radius: 40px;
@@ -189,6 +229,15 @@ body {
   border: none;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#recherche #recherche__conteneurboutonexplorer #boutonexplorer:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff79da94), to(#9356dc9e));
+  background: linear-gradient(180deg, #ff79da94 20%, #9356dc9e 100%);
+  -webkit-box-shadow: 1px 18px 15px -9px #000001;
+          box-shadow: 1px 18px 15px -9px #000001;
 }
 
 /* SECTION FONCTIONNEMENT */
@@ -339,10 +388,16 @@ body {
   border-radius: 20px;
   background-color: white;
   margin-top: 30px;
-  width: auto;
+  width: 100%;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   margin: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  #restaurant .restaurant__carte {
+    width: 45%;
+  }
 }
 
 #restaurant .restaurant__carte a {
@@ -609,6 +664,7 @@ header .restaurant__headerconteneurlogo img {
 }
 
 .menu .carte .conteneurboutoncommander :hover {
+  color: blue;
   -webkit-animation: 1s 0s 1 both éclaircissement;
           animation: 1s 0s 1 both éclaircissement;
 }
@@ -638,5 +694,9 @@ header .restaurant__headerconteneurlogo img {
   border: none;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
+}
+
+.menu .carte .conteneurboutoncommander :hover {
+  color: blue;
 }
 /*# sourceMappingURL=styles.css.map */

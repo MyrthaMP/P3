@@ -48,6 +48,32 @@ $FooterAColor : $blanc;
         margin: 0;      
     }
 
+    .encart{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    background: #727272c2;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: 3s 0s 1 both loader;
+    animation: 3s 0s 1 both oterloader; 
+    }
+    
+
+    @keyframes loader {
+        from {opacity: 1;}
+        to {opacity: 0;}        
+    }
+
+    @keyframes oterloader {
+        from {width: 100%;}
+        to {width: 0;}
+        
+    }
+
     .lds-dual-ring {
         display: inline-block;
         width: 80px;
@@ -64,9 +90,11 @@ $FooterAColor : $blanc;
         border-radius: 50%;
         border: 6px solid #fff;
         border-color: black transparent black transparent;
-        animation: lds-dual-ring 1s linear 3;
+        animation: lds-dual-ring 1s linear infinite;
         position: fixed;
-        z-index: 1;
+        justify-content: center;
+        
+
         
       }
       @keyframes lds-dual-ring {
@@ -77,7 +105,7 @@ $FooterAColor : $blanc;
           transform: rotate(360deg);
         }
       }
-    
+      
     
     /* HEADER */
     #headerconteneurlogo{
@@ -157,17 +185,9 @@ $FooterAColor : $blanc;
             display: flex;
             justify-content: center;
             
-            :hover{
-                animation: 1s 0s 1 both éclaicissement             
-                }
-                @keyframes éclaicissement {
-                   from {opacity: 1;} 
-                   to {opacity: 0.7;}                    
-                }
-               
-
-                #boutonexplorer{
-                    
+                   
+           
+                #boutonexplorer{                    
                     color: white;
                     border-radius: 40px;
                     font-size: 18px;
@@ -175,13 +195,20 @@ $FooterAColor : $blanc;
                     background: rgb(255,121,218);
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
-                    box-shadow: $ombre; 
-                                    
+                    box-shadow: $ombre;
+                    transition: 2s; 
                     
-                                      
+                    &:hover{                
+                        background: linear-gradient(180deg, #ff79da94 20%, #9356dc9e 100%);
+                        box-shadow: 1px 18px 15px -9px rgb(0, 0, 0.9);
+                    }                                                       
                 }
+                 
+               
                 
         }
+          
+        
         
         
     }
@@ -311,6 +338,7 @@ $FooterAColor : $blanc;
         flex-direction: raw;
         align-items: center;
         flex-wrap: wrap;
+        
         }
 
        .restaurant__carte{
@@ -319,9 +347,13 @@ $FooterAColor : $blanc;
         border-radius: 20px;
         background-color: $blanc;
         margin-top: 30px;
-        width: auto;
+        width: 100%;
         box-shadow: $ombre;
         margin: 20px;
+
+        @media only screen and (min-width :500px){
+            width: 45%;
+        }
 
           
 
@@ -577,6 +609,7 @@ $FooterAColor : $blanc;
                 justify-content: center;
 
                 :hover{
+                    color: blue;
                     animation: 1s 0s 1 both éclaircissement
                     }
                     @keyframes éclaircissement {
@@ -598,7 +631,8 @@ $FooterAColor : $blanc;
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
                     box-shadow: $ombre;
-                }
+                    
+                }:hover{color:blue}
             }
         }
         

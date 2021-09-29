@@ -18,6 +18,49 @@ body {
   margin: 0;
 }
 
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: black transparent black transparent;
+  -webkit-animation: lds-dual-ring 1s linear 3;
+          animation: lds-dual-ring 1s linear 3;
+  position: fixed;
+  z-index: 1;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* HEADER */
 #headerconteneurlogo {
   display: -webkit-box;
@@ -465,6 +508,12 @@ header .restaurant__headerconteneurlogo img {
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
   font-size: 24px;
+}
+
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far:active {
+  background-color: red;
+  -webkit-transform-origin: 50% bottom;
+          transform-origin: 50% bottom;
 }
 
 .menu .carte .partiedumenu {

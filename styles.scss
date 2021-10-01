@@ -58,17 +58,17 @@ $FooterAColor : $blanc;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: 3s 0s 1 both loader;
-    animation: 3s 0s 1 both oterloader; 
+    animation: 3s 0s 1 both animencart;
+    animation: 3s 0s 1 both oterencart; 
     }
     
 
-    @keyframes loader {
+    @keyframes animencart {
         from {opacity: 1;}
         to {opacity: 0;}        
     }
 
-    @keyframes oterloader {
+    @keyframes oterencart {
         from {width: 100%;}
         to {width: 0;}
         
@@ -78,8 +78,13 @@ $FooterAColor : $blanc;
         display: inline-block;
         width: 80px;
         height: 80px;
-                     
+        animation: 3s 0s 1 both oterloader;                     
       }
+      @keyframes oterloader {
+        from{opacity: 1;}
+        to{opacity: 0;}
+        
+    }
 
       .lds-dual-ring:after {
         content: " ";
@@ -91,6 +96,7 @@ $FooterAColor : $blanc;
         border: 6px solid #fff;
         border-color: black transparent black transparent;
         animation: lds-dual-ring 1s linear infinite;
+        
         position: fixed;
         justify-content: center;
         
@@ -105,6 +111,7 @@ $FooterAColor : $blanc;
           transform: rotate(360deg);
         }
       }
+      
       
     
     /* HEADER */
@@ -328,6 +335,7 @@ $FooterAColor : $blanc;
         background-color: $grisclair;
         padding-top: $paddingTopSection;
         padding-bottom: $paddingBottomSection;
+        
 
         h2{
             margin-left: 10px;
@@ -339,6 +347,7 @@ $FooterAColor : $blanc;
         align-items: center;
         flex-wrap: wrap;
         
+        
         }
 
        .restaurant__carte{
@@ -347,12 +356,15 @@ $FooterAColor : $blanc;
         border-radius: 20px;
         background-color: $blanc;
         margin-top: 30px;
-        width: 100%;
+        
         box-shadow: $ombre;
         margin: 20px;
+        @media only screen and (max-width:500px){
+            width: 100%;
+        }
 
         @media only screen and (min-width :500px){
-            width: 45%;
+            width: 44%;
         }
 
           
@@ -388,12 +400,35 @@ $FooterAColor : $blanc;
                         display: flex;
                         width: 10%;
                         justify-items: center;
+                        transition: 5s;
+                        &:hover{
+                            .far{
+                                opacity: 0;
+                            }
+                            .fas{
+                                opacity: 1;
+                            }
+
+                            
+                        }
                         
 
                         .far{
                             width: 100%;
                             font-size: 20px;
+                            position: absolute;
+                            opacity: 1;
+                            
                         }
+
+                        .fas{
+                            width: 100%;
+                            font-size: 20px;
+                            position: absolute;
+                            opacity: 0;
+                            color: $violet;
+                        }
+                        
                     }
             
                 }

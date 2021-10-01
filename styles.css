@@ -37,13 +37,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: 3s 0s 1 both loader;
-          animation: 3s 0s 1 both loader;
-  -webkit-animation: 3s 0s 1 both oterloader;
-          animation: 3s 0s 1 both oterloader;
+  -webkit-animation: 3s 0s 1 both animencart;
+          animation: 3s 0s 1 both animencart;
+  -webkit-animation: 3s 0s 1 both oterencart;
+          animation: 3s 0s 1 both oterencart;
 }
 
-@-webkit-keyframes loader {
+@-webkit-keyframes animencart {
   from {
     opacity: 1;
   }
@@ -52,7 +52,7 @@ body {
   }
 }
 
-@keyframes loader {
+@keyframes animencart {
   from {
     opacity: 1;
   }
@@ -61,7 +61,7 @@ body {
   }
 }
 
-@-webkit-keyframes oterloader {
+@-webkit-keyframes oterencart {
   from {
     width: 100%;
   }
@@ -70,7 +70,7 @@ body {
   }
 }
 
-@keyframes oterloader {
+@keyframes oterencart {
   from {
     width: 100%;
   }
@@ -83,6 +83,26 @@ body {
   display: inline-block;
   width: 80px;
   height: 80px;
+  -webkit-animation: 3s 0s 1 both oterloader;
+          animation: 3s 0s 1 both oterloader;
+}
+
+@-webkit-keyframes oterloader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes oterloader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .lds-dual-ring:after {
@@ -388,15 +408,20 @@ body {
   border-radius: 20px;
   background-color: white;
   margin-top: 30px;
-  width: 100%;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   margin: 20px;
 }
 
+@media only screen and (max-width: 500px) {
+  #restaurant .restaurant__carte {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   #restaurant .restaurant__carte {
-    width: 45%;
+    width: 44%;
   }
 }
 
@@ -436,11 +461,31 @@ body {
   display: flex;
   width: 10%;
   justify-items: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+#restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur:hover .far {
+  opacity: 0;
+}
+
+#restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur:hover .fas {
+  opacity: 1;
 }
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur .far {
   width: 100%;
   font-size: 20px;
+  position: absolute;
+  opacity: 1;
+}
+
+#restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur .fas {
+  width: 100%;
+  font-size: 20px;
+  position: absolute;
+  opacity: 0;
+  color: #9356DC;
 }
 
 /* FOOTER */

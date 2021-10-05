@@ -461,8 +461,6 @@ body {
   display: flex;
   width: 10%;
   justify-items: center;
-  -webkit-transition: 5s;
-  transition: 5s;
 }
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur:hover .far {
@@ -471,6 +469,8 @@ body {
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur:hover .fas {
   opacity: 1;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur .far {
@@ -608,12 +608,27 @@ header .restaurant__headerconteneurlogo img {
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
   font-size: 24px;
+  width: 100%;
+  position: absolute;
+  opacity: 1;
 }
 
-.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far:active {
-  background-color: red;
-  -webkit-transform-origin: 50% bottom;
-          transform-origin: 50% bottom;
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .fas {
+  width: 100%;
+  font-size: 20px;
+  position: absolute;
+  opacity: 0;
+  color: #9356DC;
+}
+
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur:active .far {
+  opacity: 0;
+}
+
+.menu .carte .conteneurh1iconcoeur .conteneuriconcoeur:active .fas {
+  opacity: 1;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .menu .carte .partiedumenu {
@@ -640,30 +655,99 @@ header .restaurant__headerconteneurlogo img {
   margin: 10px;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: auto;
+  padding-left: 15px;
 }
 
 .menu .carte .partiedumenu .choix h3 {
   margin: 0px;
+  padding-top: 10px;
 }
 
 .menu .carte .partiedumenu .choix .détail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .menu .carte .partiedumenu .choix .détail p {
-  margin-bottom: 0;
-  margin-top: 5px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.menu .carte .partiedumenu .choix .détail p:last-child {
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurprix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurprix .prix {
   font-weight: bold;
-  margin-right: 10px;
+}
+
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurcheck {
+  background-color: #99E2D0;
+  width: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurcheck .fas {
+  color: white;
+  font-size: 25px;
+  width: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.menu .carte .partiedumenu .choix .bigconteneurprixcheck:hover {
+  overflow: visible;
 }
 
 .menu .carte .entrée {
@@ -739,9 +823,14 @@ header .restaurant__headerconteneurlogo img {
   border: none;
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
-.menu .carte .conteneurboutoncommander :hover {
-  color: blue;
+.menu .carte .conteneurboutoncommander .boutoncouleurdégradée:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff79da94), to(#9356dc9e));
+  background: linear-gradient(180deg, #ff79da94 20%, #9356dc9e 100%);
+  -webkit-box-shadow: 1px 18px 15px -9px #000001;
+          box-shadow: 1px 18px 15px -9px #000001;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -45,7 +45,8 @@ $FooterAColor : $blanc;
  *{font-family: $policeroboto;}
 
     body{
-        margin: 0;      
+        margin: 0;
+              
     }
 
     .encart{
@@ -400,15 +401,17 @@ $FooterAColor : $blanc;
                         display: flex;
                         width: 10%;
                         justify-items: center;
-                        transition: 5s;
+                        
                         &:hover{
                             .far{
                                 opacity: 0;
+                                
                             }
+                            
                             .fas{
                                 opacity: 1;
-                            }
-
+                                transition: 2s; 
+                            }                          
                             
                         }
                         
@@ -417,8 +420,7 @@ $FooterAColor : $blanc;
                             width: 100%;
                             font-size: 20px;
                             position: absolute;
-                            opacity: 1;
-                            
+                            opacity: 1;                            
                         }
 
                         .fas{
@@ -552,20 +554,35 @@ $FooterAColor : $blanc;
                     display: flex;
                     align-items: center;
                     margin-left: 37px;
-                    
-                    
-
-                    
+                                      
 
                         .far{
                             font-size: 24px;
-
-                            &:active{
-                                background-color: red;
-                                transform-origin: 50% bottom;
-                        }
+                            width: 100%;
+                            position: absolute;
+                            opacity: 1;
                     
-                    }
+                        }                        
+
+                        .fas{
+                            width: 100%;
+                            font-size: 20px;
+                            position: absolute;
+                            opacity: 0;
+                            color: $violet;
+                        }
+
+                        &:active{
+                            .far{
+                                opacity: 0;                                    
+                            }
+                            
+                            .fas{
+                                opacity: 1;
+                                transition: 2s; 
+                            }               
+                        }
+
 
                 }
             }
@@ -596,26 +613,79 @@ $FooterAColor : $blanc;
                     border-radius: 20px;
                     margin: 10px;
                     box-shadow: $ombre;
-                    padding: 10px;
+                    display: flex;
+                    height: auto;
+                    width: auto;
+                    padding-left: 15px;
 
                     h3{
                         margin: 0px;
+                        padding-top: 10px;
                     }
 
                     .détail{
                         display: flex;
-                        justify-content: space-between;
-
+                        flex-direction: column;
+                        flex: 1;
+                        
                         p{
-                            margin-bottom: 0;
-                            margin-top: 5px;
-                           
-                        }
-                        p:last-child{
-                            font-weight: bold;
-                            margin-right: 10px;
+                            font-weight: normal;
+                            margin-top: 10px;
+                            margin-bottom: 10px;                            
                         }
                     }
+
+                    .bigconteneurprixcheck{
+                        display: flex;
+
+                        .conteneurprix{
+                            display: flex;
+                            align-items: flex-end;
+                                
+                            .prix{                   
+                                font-weight: bold;                                                   
+                            }                       
+                            
+                        }
+    
+                        .conteneurcheck{
+                            background-color: $vert;
+                            width: 0px;                          
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            border-radius: 0 20px 20px 0;
+                            overflow: hidden;
+                            transition: 0.3s;
+                            
+                            
+                           .fas{                        
+                            color: white;
+                            font-size: 25px;
+                            width: 65px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: nowrap;
+                                                        
+                            } 
+                         
+                        
+                        }
+                        &:hover{                            
+                                overflow: visible;
+                            }
+
+
+
+                    }
+                    
+
+                    
+                    
+
                 }
                                
                 
@@ -666,8 +736,15 @@ $FooterAColor : $blanc;
                     background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 100%);
                     border: none;
                     box-shadow: $ombre;
-                    
-                }:hover{color:blue}
+                    transition: 2s;
+                   
+                    &:hover{
+                    background: linear-gradient(180deg, #ff79da94 20%, #9356dc9e 100%);
+                    box-shadow: 1px 18px 15px -9px rgb(0, 0, 0.9);
+                    }
+
+                }
+                
             }
         }
         

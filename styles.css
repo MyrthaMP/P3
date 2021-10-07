@@ -282,6 +282,11 @@ body {
       flex-wrap: wrap;
 }
 
+#fonctionnement .ensemble__fonctionnement__boutons :hover {
+  -webkit-box-shadow: 1px 18px 15px -9px #000001;
+          box-shadow: 1px 18px 15px -9px #000001;
+}
+
 #fonctionnement .fonctionnement__boutons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,7 +649,7 @@ header .restaurant__headerconteneurlogo img {
   display: block;
   content: "";
   background-color: #99E2D0;
-  width: 50px;
+  width: 35px;
   height: 3px;
   margin-top: 3px;
 }
@@ -704,6 +709,7 @@ header .restaurant__headerconteneurlogo img {
 
 .menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurprix .prix {
   font-weight: bold;
+  margin-right: 25px;
 }
 
 .menu .carte .partiedumenu .choix .bigconteneurprixcheck .conteneurcheck {

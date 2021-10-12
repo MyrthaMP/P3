@@ -58,9 +58,9 @@ $FooterAColor : $blanc;
     background: #727272c2;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    animation: 3s 0s 1 both animencart;
-    animation: 3s 0s 1 both oterencart; 
+    align-items: center;    
+    animation: 1s 3s 1 both oterencart;
+     
     }
     
 
@@ -70,8 +70,8 @@ $FooterAColor : $blanc;
     }
 
     @keyframes oterencart {
-        from {width: 100%;}
-        to {width: 0;}
+        from {width: 100%; opacity: 1}
+        to {width: 0; opacity: 0;}
         
     }
 
@@ -239,9 +239,6 @@ $FooterAColor : $blanc;
                 flex-direction: row;
                 flex-wrap: wrap;
                 
-                :hover{
-                box-shadow: 1px 18px 15px -9px rgb(0, 0, 0.9);
-                }
           
             
         }  
@@ -258,17 +255,25 @@ $FooterAColor : $blanc;
                 border: none;
                 box-shadow: $ombre;
                 text-decoration: none;
-                width: auto;
+                width: 100%;
+                transition : 0.5s;
+
 
                 @media screen and (min-width :375px){
                     flex-wrap: nowrap;                   
                     
-                }  
+                }
+                
+                @media screen and (min-width :1200px){
+                    width: calc(33% - 110px);                   
+                    
+                }
                
                 
-                :hover{                  
-                    background-color:$grisclair;
-                    animation: 1s 0s 1 both éclaircissement
+                &:hover{
+                    box-shadow: 1px 18px 15px -9px rgb(0, 0, 0);
+                    background-color: rgb(255, 255, 255);
+                    
                 }
                 @keyframes éclaircissement {
                    from {opacity: 1;} 
@@ -305,9 +310,9 @@ $FooterAColor : $blanc;
         
                         .bouton{
                             border: none;
-                            background-color: $grisclair;
                             font-weight: bold;
                             font-size: 16px;
+                            background: transparent;
                            
                         }
                         
@@ -412,14 +417,14 @@ $FooterAColor : $blanc;
                         
 
                         .far{
-                            width: 100%;
+                            width: 30px;
                             font-size: 20px;
                             position: absolute;
                             opacity: 1;                            
                         }
 
                         .fas{
-                            width: 100%;
+                            width: 30px;
                             font-size: 20px;
                             position: absolute;
                             opacity: 0;
@@ -517,11 +522,38 @@ $FooterAColor : $blanc;
 
     .menu{     
  
-      .conteneurphoto{
+      .conteneurphoto_lapalette{
             height: 240px;
             width: 100%;
             object-fit: cover;
             background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-size: cover;
+                   
+        }
+
+        .conteneurphoto_lanote{
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+            background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            background-size: cover;
+                   
+        }
+
+        .conteneurphoto_alafrancaise{
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+            background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            background-size: cover;
+                   
+        }
+
+        .conteneurphoto_ledelice{
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+            background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
             background-size: cover;
                    
         }
@@ -549,6 +581,7 @@ $FooterAColor : $blanc;
                     display: flex;
                     align-items: center;
                     margin-left: 37px;
+                    width: 50px;
                                       
 
                         .far{
@@ -670,19 +703,19 @@ $FooterAColor : $blanc;
                          
                         
                         }
-                        &:hover{                            
-                                overflow: visible;
-                            }
+                        
 
 
 
-                    }
+                    }                   
                     
-
-                    
-                    
+                 &:active .conteneurcheck {
+                        width: 55px;
+                    }   
 
                 }
+                
+                
                                
                 
             }
@@ -710,7 +743,7 @@ $FooterAColor : $blanc;
                 justify-content: center;
 
                 :hover{
-                    color: blue;
+                    
                     animation: 1s 0s 1 both éclaircissement
                     }
                     @keyframes éclaircissement {

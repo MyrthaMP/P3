@@ -37,10 +37,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: 3s 0s 1 both animencart;
-          animation: 3s 0s 1 both animencart;
-  -webkit-animation: 3s 0s 1 both oterencart;
-          animation: 3s 0s 1 both oterencart;
+  -webkit-animation: 1s 3s 1 both oterencart;
+          animation: 1s 3s 1 both oterencart;
 }
 
 @-webkit-keyframes animencart {
@@ -64,18 +62,22 @@ body {
 @-webkit-keyframes oterencart {
   from {
     width: 100%;
+    opacity: 1;
   }
   to {
     width: 0;
+    opacity: 0;
   }
 }
 
 @keyframes oterencart {
   from {
     width: 100%;
+    opacity: 1;
   }
   to {
     width: 0;
+    opacity: 0;
   }
 }
 
@@ -282,11 +284,6 @@ body {
       flex-wrap: wrap;
 }
 
-#fonctionnement .ensemble__fonctionnement__boutons :hover {
-  -webkit-box-shadow: 1px 18px 15px -9px #000001;
-          box-shadow: 1px 18px 15px -9px #000001;
-}
-
 #fonctionnement .fonctionnement__boutons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,7 +301,9 @@ body {
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   text-decoration: none;
-  width: auto;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 375px) {
@@ -314,10 +313,16 @@ body {
   }
 }
 
-#fonctionnement .fonctionnement__boutons :hover {
-  background-color: #f5f8f7;
-  -webkit-animation: 1s 0s 1 both éclaircissement;
-          animation: 1s 0s 1 both éclaircissement;
+@media screen and (min-width: 1200px) {
+  #fonctionnement .fonctionnement__boutons {
+    width: calc(33% - 110px);
+  }
+}
+
+#fonctionnement .fonctionnement__boutons:hover {
+  -webkit-box-shadow: 1px 18px 15px -9px black;
+          box-shadow: 1px 18px 15px -9px black;
+  background-color: white;
 }
 
 @-webkit-keyframes éclaircissement {
@@ -371,9 +376,9 @@ body {
 
 #fonctionnement .fonctionnement__boutons a .bouton {
   border: none;
-  background-color: #f5f8f7;
   font-weight: bold;
   font-size: 16px;
+  background: transparent;
 }
 
 /* SECTION RESTAURANT */
@@ -479,14 +484,14 @@ body {
 }
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur .far {
-  width: 100%;
+  width: 30px;
   font-size: 20px;
   position: absolute;
   opacity: 1;
 }
 
 #restaurant .restaurant__carte a .paragrapheetlogo .conteneurcoeur .fas {
-  width: 100%;
+  width: 30px;
   font-size: 20px;
   position: absolute;
   opacity: 0;
@@ -572,12 +577,39 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-.menu .conteneurphoto {
+.menu .conteneurphoto_lapalette {
   height: 240px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+}
+
+.menu .conteneurphoto_lanote {
+  height: 240px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+}
+
+.menu .conteneurphoto_alafrancaise {
+  height: 240px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+}
+
+.menu .conteneurphoto_ledelice {
+  height: 240px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
 }
 
@@ -609,6 +641,7 @@ header .restaurant__headerconteneurlogo img {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 37px;
+  width: 50px;
 }
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
@@ -752,8 +785,8 @@ header .restaurant__headerconteneurlogo img {
       flex-wrap: nowrap;
 }
 
-.menu .carte .partiedumenu .choix .bigconteneurprixcheck:hover {
-  overflow: visible;
+.menu .carte .partiedumenu .choix:active .conteneurcheck {
+  width: 55px;
 }
 
 .menu .carte .entrée {
@@ -799,7 +832,6 @@ header .restaurant__headerconteneurlogo img {
 }
 
 .menu .carte .conteneurboutoncommander :hover {
-  color: blue;
   -webkit-animation: 1s 0s 1 both éclaircissement;
           animation: 1s 0s 1 both éclaircissement;
 }

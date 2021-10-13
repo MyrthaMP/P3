@@ -789,6 +789,33 @@ header .restaurant__headerconteneurlogo img {
   width: 55px;
 }
 
+.menu .carte .partiedumenu .choix:active .fas {
+  -webkit-animation: 1s 0s 1 both rotationcheck;
+          animation: 1s 0s 1 both rotationcheck;
+}
+
+@-webkit-keyframes rotationcheck {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationcheck {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .menu .carte .entrée {
   -webkit-animation: 2s 1s 1 both apparition;
           animation: 2s 1s 1 both apparition;

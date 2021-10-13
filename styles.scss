@@ -697,20 +697,30 @@ $FooterAColor : $blanc;
                             flex-direction: row;
                             justify-content: center;
                             align-items: center;
-                            flex-wrap: nowrap;
-                                                        
+                            flex-wrap: nowrap;                           
                             } 
                          
                         
-                        }
-                        
-
+                        }                       
 
 
                     }                   
                     
-                 &:active .conteneurcheck {
-                        width: 55px;
+                    &:active .conteneurcheck {
+                        width: 55px;                        
+                    }
+
+                    &:active .fas{
+                    animation: 1s 0s 1 both rotationcheck;
+                        @keyframes rotationcheck {
+                            from{
+                                transform: rotate(0deg);
+                            }
+                            to{
+                                transform: rotate(360deg);
+                            }
+                                
+                        } 
                     }   
 
                 }

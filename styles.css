@@ -421,18 +421,33 @@ body {
   -webkit-box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
           box-shadow: 1px 18px 15px -9px rgba(0, 0, 0, 0.56);
   margin: 20px;
+  position: relative;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   #restaurant .restaurant__carte {
     width: 100%;
   }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 700px) {
   #restaurant .restaurant__carte {
     width: 44%;
   }
+}
+
+#restaurant .restaurant__carte .badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 7px;
+  padding-top: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  border-radius: 5px;
+  background: #99E2D0;
+  color: #174609;
 }
 
 #restaurant .restaurant__carte a {

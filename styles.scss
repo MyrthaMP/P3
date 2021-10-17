@@ -356,19 +356,31 @@ $FooterAColor : $blanc;
         flex-direction: column;
         border-radius: 20px;
         background-color: $blanc;
-        margin-top: 30px;
-        
+        margin-top: 30px;        
         box-shadow: $ombre;
         margin: 20px;
-        @media only screen and (max-width:500px){
+        position: relative;
+        @media only screen and (max-width:700px){
             width: 100%;
         }
 
-        @media only screen and (min-width :500px){
+        @media only screen and (min-width :700px){
             width: 44%;
         }
 
-          
+        .badge{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 7px;
+                padding-top: 7px;
+                padding-right: 7px;
+                padding-bottom: 7px;
+                padding-left: 7px;
+            border-radius: 5px;
+            background: $vert;
+            color: #174609;
+        }
 
             a{
                 text-decoration: none;

@@ -518,6 +518,10 @@ body {
   position: absolute;
   opacity: 0;
   color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #9356dc), color-stop(80%, #ff79da));
+  background: linear-gradient(180deg, #9356dc 20%, #ff79da 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* FOOTER */
@@ -668,17 +672,21 @@ header .restaurant__headerconteneurlogo img {
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .far {
   font-size: 24px;
-  width: 100%;
+  width: 50px;
   position: absolute;
   opacity: 1;
 }
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur .fas {
-  width: 100%;
+  width: 50px;
   font-size: 20px;
   position: absolute;
   opacity: 0;
   color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #9356dc), color-stop(80%, #ff79da));
+  background: linear-gradient(180deg, #9356dc 20%, #ff79da 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur:active .far {
@@ -689,6 +697,17 @@ header .restaurant__headerconteneurlogo img {
   opacity: 1;
   -webkit-transition: 2s;
   transition: 2s;
+}
+
+@media screen and (min-width: 1000px) {
+  .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur:hover .far {
+    opacity: 0;
+  }
+  .menu .carte .conteneurh1iconcoeur .conteneuriconcoeur:hover .fas {
+    opacity: 1;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
 }
 
 .menu .carte .partiedumenu {
@@ -726,6 +745,9 @@ header .restaurant__headerconteneurlogo img {
 .menu .carte .partiedumenu .choix h3 {
   margin: 0px;
   padding-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .carte .partiedumenu .choix .détail {
@@ -739,12 +761,18 @@ header .restaurant__headerconteneurlogo img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .carte .partiedumenu .choix .détail p {
   font-weight: normal;
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .carte .partiedumenu .choix .bigconteneurprixcheck {
@@ -838,17 +866,47 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-.menu .carte .entrée {
+@media screen and (min-width: 1000px) {
+  .menu .carte .partiedumenu .choix:hover .conteneurcheck {
+    width: 55px;
+  }
+  .menu .carte .partiedumenu .choix:hover .fas {
+    -webkit-animation: 1s 0s 1 both rotationcheck;
+            animation: 1s 0s 1 both rotationcheck;
+  }
+  @-webkit-keyframes rotationcheck {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotationcheck {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+}
+
+.menu .carte .partiedumenu .entrée {
   -webkit-animation: 2s 1s 1 both apparition;
           animation: 2s 1s 1 both apparition;
 }
 
-.menu .carte .plat {
+.menu .carte .partiedumenu .plat {
   -webkit-animation: 2s 2s 1 both apparition;
           animation: 2s 2s 1 both apparition;
 }
 
-.menu .carte .dessert {
+.menu .carte .partiedumenu .dessert {
   -webkit-animation: 2s 3s 1 both apparition;
           animation: 2s 3s 1 both apparition;
 }
@@ -871,7 +929,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-.menu .carte .conteneurboutoncommander {
+.menu .carte .partiedumenu .conteneurboutoncommander {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -880,7 +938,7 @@ header .restaurant__headerconteneurlogo img {
           justify-content: center;
 }
 
-.menu .carte .conteneurboutoncommander :hover {
+.menu .carte .partiedumenu .conteneurboutoncommander :hover {
   -webkit-animation: 1s 0s 1 both éclaircissement;
           animation: 1s 0s 1 both éclaircissement;
 }
@@ -894,7 +952,7 @@ header .restaurant__headerconteneurlogo img {
   }
 }
 
-.menu .carte .conteneurboutoncommander .boutoncouleurdégradée {
+.menu .carte .partiedumenu .conteneurboutoncommander .boutoncouleurdégradée {
   color: white;
   border-radius: 40px;
   font-size: 16px;
@@ -914,7 +972,7 @@ header .restaurant__headerconteneurlogo img {
   transition: 2s;
 }
 
-.menu .carte .conteneurboutoncommander .boutoncouleurdégradée:hover {
+.menu .carte .partiedumenu .conteneurboutoncommander .boutoncouleurdégradée:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff79da94), to(#9356dc9e));
   background: linear-gradient(180deg, #ff79da94 20%, #9356dc9e 100%);
   -webkit-box-shadow: 1px 18px 15px -9px #000001;

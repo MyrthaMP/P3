@@ -443,6 +443,10 @@ $FooterAColor : $blanc;
                             position: absolute;
                             opacity: 0;
                             color: $violet;
+                            background: linear-gradient(180deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 80%);
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;                               
+                           
                         }
                         
                     }
@@ -600,18 +604,21 @@ $FooterAColor : $blanc;
 
                         .far{
                             font-size: 24px;
-                            width: 100%;
+                            width: 50px;
                             position: absolute;
                             opacity: 1;
                     
                         }                        
 
                         .fas{
-                            width: 100%;
+                            width: 50px;
                             font-size: 20px;
                             position: absolute;
                             opacity: 0;
                             color: $violet;
+                            background: linear-gradient(180deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 80%);
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent; 
                         }
 
                         &:active{
@@ -623,6 +630,19 @@ $FooterAColor : $blanc;
                                 opacity: 1;
                                 transition: 2s; 
                             }               
+                        }
+
+                        @media screen and  (min-width: 1000px){
+                            &:hover{
+                                .far{
+                                    opacity: 0;                                    
+                                }
+                                
+                                .fas{
+                                    opacity: 1;
+                                    transition: 2s; 
+                                }               
+                            }  
                         }
 
 
@@ -663,17 +683,26 @@ $FooterAColor : $blanc;
                     h3{
                         margin: 0px;
                         padding-top: 10px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
 
                     .détail{
                         display: flex;
                         flex-direction: column;
                         flex: 1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                         
                         p{
                             font-weight: normal;
                             margin-top: 10px;
-                            margin-bottom: 10px;                            
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;                           
                         }
                     }
 
@@ -721,8 +750,10 @@ $FooterAColor : $blanc;
                     }                   
                     
                     &:active .conteneurcheck {
-                        width: 55px;                        
+                        width: 55px;                                               
                     }
+                     
+
 
                     &:active .fas{
                     animation: 1s 0s 1 both rotationcheck;
@@ -735,9 +766,30 @@ $FooterAColor : $blanc;
                             }
                                 
                         } 
-                    }   
+                    } 
+                    
+                    @media screen and  (min-width: 1000px){
 
-                }
+                        &:hover .conteneurcheck {
+                            width: 55px;                                               
+                        }
+                         
+    
+    
+                        &:hover .fas{
+                            animation: 1s 0s 1 both rotationcheck;
+                                @keyframes rotationcheck {
+                                    from{
+                                        transform: rotate(0deg);
+                                    }
+                                    to{
+                                        transform: rotate(360deg);
+                                    }
+                                    
+                                } 
+                        }
+
+                    }
                 
                 
                                
@@ -765,11 +817,11 @@ $FooterAColor : $blanc;
             .conteneurboutoncommander{
                 display: flex;
                 justify-content: center;
-
+                
                 :hover{
                     
                     animation: 1s 0s 1 both éclaircissement
-                    }
+                }
                     @keyframes éclaircissement {
                        from {opacity: 1;} 
                        to {opacity: 0.7;}                    
@@ -804,4 +856,7 @@ $FooterAColor : $blanc;
 
 
     }
+
+}
+
     

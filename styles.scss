@@ -820,14 +820,11 @@ $FooterAColor : $blanc;
                 
                 :hover{
                     
-                    animation: 1s 0s 1 both éclaircissement
+                    animation: 1s 0s 1 both eclaircissement
                 }
-                    @keyframes éclaircissement {
-                       from {opacity: 1;} 
-                       to {opacity: 0.7;}                    
-                    }
+                   
 
-                .boutoncouleurdégradée{                    
+                .boutoncouleurdegradee{                    
                     color: white;
                     border-radius: 40px;
                     font-size: 16px;
@@ -849,6 +846,11 @@ $FooterAColor : $blanc;
                     }
 
                 }
+
+                @keyframes eclaircissement {
+                    from {opacity: 1;} 
+                    to {opacity: 0.7;}                    
+                 }
                 
             }
         }

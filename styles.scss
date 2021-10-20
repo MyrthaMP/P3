@@ -814,16 +814,16 @@ $FooterAColor : $blanc;
                 }
             }
 
+
+        }
             .conteneurboutoncommander{
                 display: flex;
                 justify-content: center;
                 
-                :hover{
-                    
+                :hover{                    
                     animation: 1s 0s 1 both eclaircissement
                 }
                    
-
                 .boutoncouleurdegradee{                    
                     color: white;
                     border-radius: 40px;
@@ -845,20 +845,20 @@ $FooterAColor : $blanc;
                     box-shadow: 1px 18px 15px -9px rgb(0, 0, 0.9);
                     }
 
-                }
 
-                @keyframes eclaircissement {
-                    from {opacity: 1;} 
-                    to {opacity: 0.7;}                    
-                 }
-                
-            }
-        }
-        
+                }
+                           
+            }        
 
 
     }
 
 }
+
+
+@keyframes eclaircissement {
+    from {opacity: 1;} 
+    to {opacity: 0.7;}                    
+ }
 
     
